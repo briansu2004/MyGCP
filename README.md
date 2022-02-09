@@ -3,7 +3,7 @@
 My GCP
 
 
-## My GCP projects
+## My Experience / My GCP projects
 
 - Designed, developed, deployed and managed Microservices with Node.js and Java RESTful APIs in GCP for a large Telecommunication company
     - Built new REST APIs with Node.js and Java to talk with downstream APIs and serve for upstream applications.
@@ -15,6 +15,10 @@ My GCP
     - Monitored API performance with Google Cloud stack driver dashboard and alert policies.
     - Implemented immutable infrasture with Terraform scripts and pull requests.
     - Conducted performance testing with JMeter.
+    - Protected sensitive data with DLP API, Cloud Function and Pub/Sub.
+    - Mitigated DDoS threats with Cloud Armor.
+    - Identified vulnerabilities in the App Engine with Security Scanner.
+
 
 - Designed and implemented Cloud functions and CI/CD data pipelines in Google Cloud for a large multinational company
     - Programmed cloud functions in Golang and Python.
@@ -40,50 +44,86 @@ Exercises and practice:
 
 
 
-## My Experience
 
 
+## GCE GKE GAE GCF
+
+Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF). 
 
 ## GCP Architect
 
-![](image/README/001.png)
+![](GCP-Architect/001.png)
 
-![](image/README/002.png)
+![](GCP-Architect/002.png)
 
-![](image/README/003.png)
+![](GCP-Architect/003.png)
 
-![](image/README/004.png)
+![](GCP-Architect/004.png)
 
-![](image/README/005.png)
+![](GCP-Architect/005.png)
 
-![](image/README/006.png)
+![](GCP-Architect/006.png)
 
-![](image/README/007.png)
+![](GCP-Architect/007.png)
 
-![](image/README/008.png)
+![](GCP-Architect/008.png)
 
-![](image/README/009.png)
+![](GCP-Architect/009.png)
 
-![](image/README/010.png)
+![](GCP-Architect/010.png)
 
-![](image/README/011.png)
+![](GCP-Architect/011.png)
 
-![](image/README/012.png)
+![](GCP-Architect/012.png)
 
-![](image/README/013.png)
+![](GCP-Architect/013.png)
 
-![](image/README/014.png)
+![](GCP-Architect/014.png)
 
-![](image/README/015.png)
+![](GCP-Architect/015.png)
 
-![](image/README/016.png)
+![](GCP-Architect/016.png)
 
-![](image/README/017.png)
+![](GCP-Architect/017.png)
 
-![](image/README/018.png)
+![](GCP-Architect/018.png)
 
-![](image/README/019.png)
+![](GCP-Architect/019.png)
+
+![](GCP-Architect/020.png)
+
+![](GCP-Architect/021.png)
+
+
+Dataproc vs Dataflow
+
+![](GCP-Architect/022.png)
+
+
+Kafka vs PubSub
+
+![](GCP-Architect/023.png)
+
+IAM best practice
+
+![](GCP-Architect/024.png)
+
+Cloud KMS
+
+![](image/README/025.png)
+
+![](image/README/026.png)
+
+![](image/README/027.png)
+
+![](image/README/028.png)
 
 
 
+
+## My iw
+
+https://bespinglobal.freshteam.com/assessments/zYqzLbG6Ll9W
+
+https://meet.google.com/jfy-iepw-vbo
 
