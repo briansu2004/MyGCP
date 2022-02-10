@@ -121,9 +121,3 @@ Cloud KMS
 
 
 
-## My iw
-
-https://bespinglobal.freshteam.com/assessments/zYqzLbG6Ll9W
-
-https://meet.google.com/jfy-iepw-vbo
-
