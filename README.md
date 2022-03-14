@@ -136,3 +136,17 @@ Cloud KMS
 - Cloud Build builds the container image and pushes to Container Registry.
 - Cloud Build then notifies Cloud Run to redeploy
 - Cloud Run pulls the latest image from the Container Registry and runs it.
+
+## BigQuery
+
+### Dremel
+
+Dremel is a distributed system developed at Google for interactively querying large datasets.
+
+Dremel is the query engine used in Google's BigQuery service.
+
+Dremel is the inspiration for Apache Drill, Apache Impala, and Dremio, an Apache licensed platform that includes a distributed SQL execution engine.
+
+## Best Practice for Querying
+
+![](image/README/querying_best_practice.png)
