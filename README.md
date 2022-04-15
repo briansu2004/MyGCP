@@ -57,6 +57,16 @@ Exercises and practice:
 
 - Hands-on labs with Qwiklabs.
 
+## Eventarc + Cloud Run + Workflow
+
+These are new tools and solutions for new projects.
+
+### Some use cases
+
+For the text files uploaded to GCP buckets, use Eventarc + Cloud Run + Workflow + OpenSource Clam to scan and verify if they are safe.
+
+For the images uploaded to GCP buckets, use Eventarc + Cloud Run + Workflow + Vision API to scan and verify if they are safe.
+
 ## GCE GKE GAE GCF
 
 Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
