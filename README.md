@@ -57,7 +57,7 @@ Exercises and practice:
 
 - Hands-on labs with Qwiklabs.
 
-## Eventarc + Cloud Run + Workflow
+## Eventarc + Cloud Run + Workflow + Secret Manager
 
 These are new tools and solutions for new projects.
 
