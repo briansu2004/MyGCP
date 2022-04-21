@@ -1,0 +1,17 @@
+{
+  "name": "cloud-logging-nodejs-bunyan",
+  "version": "1.0.0",
+  "description": "Can use Bunyan or Winston",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Brian Su",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/logging-bunyan": "^3.3.1",
+    "bunyan": "^1.8.15"
+  }
+}
