@@ -57,6 +57,23 @@ Exercises and practice:
 
 - Hands-on labs with Qwiklabs.
 
+## GCP networks
+
+In my GCP projects, there are lot of network / firewall / connectivity issues.
+
+
+![GCP_Network](GCP_Network.md)
+
+## Dataflow jobs
+
+Java
+
+Python
+
+Cloud Build
+
+YAML
+
 ## Eventarc + Cloud Run + Workflow + Secret Manager
 
 These are new tools and solutions for new projects.
