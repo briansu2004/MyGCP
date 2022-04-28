@@ -61,8 +61,7 @@ Exercises and practice:
 
 In my GCP projects, there are lot of network / firewall / connectivity issues.
 
-
-![GCP_Network](GCP_Network.md)
+[GCP_Network](GCP_Network.md)
 
 ## Dataflow jobs
 
