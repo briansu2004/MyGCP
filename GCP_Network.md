@@ -27,3 +27,13 @@ For more information as well as an example of how to use this information, refer
 CIDR (Classless Inter-Domain Routing) -- also known as supernetting -- is a method of assigning Internet Protocol (IP) addresses that improves the efficiency of address distribution and replaces the previous system based on Class A, Class B and Class C networks.
 
 ![](image/GCP_Network/CIDR_example.png)
+
+## Firewall rules
+
+Example
+
+![](image/GCP_Network/gcp_firewall_rule_01.png)
+
+## Dataflow vs Composer
+
+![](image/GCP_Network/Dataflow-vs-Composer.png)
