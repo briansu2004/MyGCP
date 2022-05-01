@@ -36,4 +36,10 @@ Example
 
 ## Dataflow vs Composer
 
-![](image/GCP_Network/Dataflow-vs-Composer.png)
+![](image/GCP_Network/Dataflow_vs_Composer_01.png)
+
+![](image/GCP_Network/Dataflow_vs_Composer_02.png)
+
+![](image/GCP_Network/dataflow.png)
+
+![](image/GCP_Network/composer.png)
