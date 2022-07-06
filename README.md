@@ -180,3 +180,7 @@ Dremel is the inspiration for Apache Drill, Apache Impala, and Dremio, an Apache
 ![](image/README/best_practice_01.png)
 
 ![](image/README/best_practice_02.png)
+
+## Cloud Build
+
+[GCP_CloudBuild](GCP_CloudBuild.md)
