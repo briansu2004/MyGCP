@@ -4,6 +4,56 @@ My GCP
 
 ## My Experience / My GCP projects
 
+- Malware Scanner pipeline
+
+  clamAV open source node.js app
+
+  customize and tweak to handle large files
+
+  dockerize it
+
+  created lots of snow requests to resolve access and permission issues
+
+  cloud build
+
+  BitBuckets
+
+  Terraform
+
+- Dataflow ingestion from Oracle to BigQuery
+
+  cx_Oracle
+
+  Oracle instant client
+
+  custom image
+
+  Cloud Build
+
+  Beam
+
+  DirectRunner
+
+  DataflowRunner
+
+- PubSub topic
+
+  schema
+
+  topic
+
+  subscription
+
+  google API
+
+  rest API
+
+  Postman
+
+  base64 encoding
+
+  cloud function
+
 - Designed, developed, deployed and managed Microservices with Node.js and Java RESTful APIs in GCP for a large Telecommunication company
 
   - Built new REST APIs with Node.js and Java to talk with downstream APIs and serve for upstream applications.
