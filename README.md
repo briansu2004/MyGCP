@@ -44,6 +44,10 @@ My GCP
 
   Cloud Build
 
+  Dataflow Template with Options
+
+  Secert Manager
+
 - PubSub topic
 
   schema
