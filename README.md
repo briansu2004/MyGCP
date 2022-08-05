@@ -22,19 +22,27 @@ My GCP
 
 - Dataflow ingestion from Oracle to BigQuery
 
-  cx_Oracle
+  cx_Oracle -> oracledb
 
   Oracle instant client
 
-  custom image
-
-  Cloud Build
-
-  Beam
+  Apache Beam
 
   DirectRunner
 
   DataflowRunner
+
+  SubNetwork
+
+  setup.py with custom commands
+
+  requirements.txt
+
+  Dockerfile + YAML
+
+  custom container/image
+
+  Cloud Build
 
 - PubSub topic
 
