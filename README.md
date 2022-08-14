@@ -2,9 +2,21 @@
 
 My GCP
 
-## My Experience / My GCP projects
+## My receive GCP projects
 
-- Malware Scanner pipeline
+### GitLab CI/CD pipeline with BigQuery and GCS
+
+- Data owners create the merge request
+
+- GitLab pipeline got trigered by the merge requests
+
+- Data Goverence guys approve / reject the merge request
+
+- GitLab pipeline take the incoming the csv / json files and reload BiqQuery tables
+
+- Then archive to GCS buckets in Arvo format
+
+### Malware Scanner pipeline
 
   clamAV open source node.js app
 
@@ -20,7 +32,7 @@ My GCP
 
   Terraform
 
-- Dataflow ingestion from Oracle to BigQuery
+### Dataflow ingestion from Oracle to BigQuery
 
   cx_Oracle -> oracledb
 
@@ -48,7 +60,7 @@ My GCP
 
   Secert Manager
 
-- PubSub topic
+### PubSub topic with Cloud Function in Python
 
   schema
 
@@ -65,6 +77,8 @@ My GCP
   base64 encoding
 
   cloud function
+
+## My earlier GCP projects
 
 - Designed, developed, deployed and managed Microservices with Node.js and Java RESTful APIs in GCP for a large Telecommunication company
 
