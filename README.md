@@ -2,7 +2,7 @@
 
 My GCP
 
-## My receive GCP projects
+## My recent GCP projects
 
 ### GitLab CI/CD pipeline with BigQuery and GCS
 
@@ -16,33 +16,19 @@ My GCP
 
 - Then archive to GCS buckets in Arvo format
 
-### Malware Scanner pipeline
-
-  clamAV open source node.js app
-
-  customize and tweak to handle large files
-
-  dockerize it
-
-  created lots of snow requests to resolve access and permission issues
-
-  cloud build
-
-  BitBuckets
-
-  Terraform
-
 ### Dataflow ingestion from Oracle to BigQuery
 
   cx_Oracle -> oracledb
 
-  Oracle instant client
+  Oracle instant client in Linux
 
   Apache Beam
 
   DirectRunner
 
   DataflowRunner
+
+  Self contaoiner
 
   SubNetwork
 
@@ -56,10 +42,36 @@ My GCP
 
   Cloud Build
 
-  Dataflow Template with Options
+  Dataflow Template with Options (can clone the job easily)
 
   Secert Manager
 
+  Private IPs
+
+  Sub network
+
+  setup.py
+
+### Malware Scanner pipeline
+
+  clamAV open source node.js app
+
+  Customize and tweak to handle large files
+
+  GCS buckets
+
+  Containerize / dockerize
+
+  Created lots of snow requests to resolve access and permission issues
+
+  Cloud build / Triggers
+
+  Cloud Run
+
+  BitBuckets
+
+  Terraform
+  
 ### PubSub topic with Cloud Function in Python
 
   schema
