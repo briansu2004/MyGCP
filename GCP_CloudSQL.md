@@ -1,6 +1,6 @@
 # GCP Cloud SQL
 
-Cloud SQl lab
+Cloud SQL lab
 
 <!-- https://www.youtube.com/watch?v=q6noaMAnk5s -->
 
