@@ -2,6 +2,12 @@
 
 Cloud SQl lab
 
+<!-- https://www.youtube.com/watch?v=q6noaMAnk5s -->
+
+Create a CloudSQL instance Lab → <https://goo.gle/3EefJT9>
+
+Connecting GCE to Cloud SQL Lab → <https://goo.gle/32dRd7F>
+
 ## Database services Portfolio
 
 ![1672590914504](image/GCP_CloudSQL/1672590914504.png)
