@@ -158,13 +158,35 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 - Planned architecture changes for moving everything to Google Cloud Platform, such as migrating Oracle to NoSQL BigQuery.
 - Documented everything in the share drive for knowledge sharing.
 
-### Exercises and practice
+## GCE GKE GAE GCF
 
-- Hands-on labs with Qwiklabs.
+Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
+
+## GCP Architect
+
+[GCP Architect](GCP_Architect.md)
+
+## GCP CI/CD pipeline
+
+![gcp_cicd_01](image/README/gcp_cicd_01.png)
+
+- Developer checks in the source code to a Version Control system such as GitHub
+- GitHub triggers a post-commit hook to Cloud Build.
+- Cloud Build builds the container image and pushes to Container Registry.
+- Cloud Build then notifies Cloud Run to redeploy
+- Cloud Run pulls the latest image from the Container Registry and runs it.
+
+## Cloud Build
+
+[GCP_CloudBuild](GCP_CloudBuild.md)
+
+## GCP BigQuery
+
+[GCP BigQuery](GCP_BigQuery.md)
 
 ## GCP networks
 
-In my GCP projects, there are lot of network / firewall / connectivity issues.
+Troubleshooted lots of network / firewall / connectivity issues in my GCP projects.
 
 [GCP_Network](GCP_Network.md)
 
@@ -190,28 +212,6 @@ For the text files uploaded to GCP buckets, use Eventarc + Cloud Run + Workflow 
 
 For the images uploaded to GCP buckets, use Eventarc + Cloud Run + Workflow + Vision API to scan and verify if they are safe.
 
-## GCE GKE GAE GCF
+## Lab, exercises and practice
 
-Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
-
-## GCP Architect
-
-[GCP Architect](GCP_Architect.md)
-
-## GCP CI/CD pipeline
-
-![](image/README/gcp_cicd_01.png)
-
-- Developer checks in the source code to a Version Control system such as GitHub
-- GitHub triggers a post-commit hook to Cloud Build.
-- Cloud Build builds the container image and pushes to Container Registry.
-- Cloud Build then notifies Cloud Run to redeploy
-- Cloud Run pulls the latest image from the Container Registry and runs it.
-
-## Cloud Build
-
-[GCP_CloudBuild](GCP_CloudBuild.md)
-
-## GCP BigQuery
-
-[GCP BigQuery](GCP_BigQuery.md)
+- Hands-on labs with Qwiklabs.
