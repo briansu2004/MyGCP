@@ -10,6 +10,8 @@ Google Kubernetes Engine is formerly known as Container Engine. It takes care of
 
 #### Steps to deploy a Spring Boot app to GCP GKE
 
+[Another Guide for Spring Boot 2 GCP GKE](GCP_SpringBoot2GCP_GKE_2.md)
+
 1. Create a Kubernetes Cluster
 
 2. Open the Google Cloud Shell
