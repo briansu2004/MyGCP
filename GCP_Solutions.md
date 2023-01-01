@@ -4,6 +4,46 @@
 
 There are 3 ways to deploy and run an Spring Boot app on GCP.
 
+### Spring Boot app to GCP GKE [Recommended]
+
+Google Kubernetes Engine is formerly known as Container Engine. It takes care of provisioning and maintaining the Cluster Virtual Machines, Scaling our applications.
+
+### Steps to deploy a Spring Boot app to GCP GKE
+
+1. Create a Kubernetes Cluster
+
+2. Open the Google Cloud Shell
+
+3. Clone the Spring App project in Cloud shell
+
+`$ git clone https://github.com/infiprotonblog/hello-world-spring-boot-app.git`
+
+4. change the directory to Spring App
+
+`$ cd spring-boot-app/springapp/`
+
+5. Build the Docker-image for Spring App
+
+`$ docker build -t <user-name>/<tag-name> <location-of-dockerfile>`
+
+`$ docker build -t sunilbvb/spring-app .`
+
+6. Check the images, we just built
+
+`$ docker images`
+
+![1672580331557](image/GCP_Solutions/1672580331557.png)
+
+7. Run the Spring App Docker image locally in the Cloud shell
+
+`$ docker run -d -p <port>:<port> <image-name>`
+
+`$ docker run -d -p 8080:8080 spring-app`
+
+8. Check the App is running by clicking on Web Preview on the port 8080
+
+![1672580339614](image/GCP_Solutions/1672580339614.png)
+
 ### Spring Boot app to GCP GAE [Not recommended]
 
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
