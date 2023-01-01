@@ -328,3 +328,45 @@ Docker build flow:
 Jib build flow:
 
 ![1672582199966](image/GCP_Solutions/1672582199966.png)
+
+How to use Jib to containerize your application
+
+Jib is available as plugins for Maven and Gradle and requires minimal configuration. Simply add the plugin to your build definition and configure the target image. If you are building to a private registry, make sure to configure Jib with credentials for your registry. The easiest way to do this is to use credential helpers like docker-credential-gcr. Jib also provides additional rules for building an image to a Docker daemon if you need it.
+
+Jib on Maven
+
+```xml
+<plugin>
+  <groupId>com.google.cloud.tools</groupId>
+  <artifactId>jib-maven-plugin</artifactId>
+  <version>0.9.0</version>
+  <configuration>
+    <to>
+      <image>gcr.io/my-project/image-built-with-jib</image>
+    </to>
+  </configuration>
+</plugin>
+```
+
+```dos
+# Builds to a container image registry.
+$ mvn compile jib:build
+# Builds to a Docker daemon.
+$ mvn compile jib:dockerBuild
+```
+
+Jib on Gradle
+
+```dos
+plugins {
+  id 'com.google.cloud.tools.jib' version '0.9.0'
+}
+jib.to.image = 'gcr.io/my-project/image-built-with-jib'
+```
+
+```dos
+# Builds to a container image registry.
+$ gradle jib
+# Builds to a Docker daemon.
+$ gradle jibDockerBuild
+```
