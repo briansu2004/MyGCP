@@ -317,6 +317,55 @@ Auto Scaling is Slower than Google App Engine
 
 High Expensive as we need someone to manage VM and install everything for running Application
 
+### How to connect the Google Cloud SQL into your Spring Boot application
+
+Cloud SQL is a fully-managed database service that helps you set up, maintain, manage, and administer your relational databases on Google Cloud Platform.
+
+You can use Cloud SQL with MySQL, PostgreSQL, or SQL Server.
+
+Add the following properties into your application.properties file.
+
+JDBC URL Format
+
+`jdbc:mysql://google/<DATABASE-NAME>?cloudSqlInstance = <GOOGLE_CLOUD_SQL_INSTANCE_NAME> &socketFactory = com.google.cloud.sql.mysql.SocketFactory&user = <USERNAME>&password = <PASSWORD>`
+
+Note − The Spring Boot application and Google Cloud SQL should be in same GCP project.
+
+`application.properties` file:
+
+```dos
+spring.dbProductService.driverClassName = com.mysql.jdbc.Driver
+spring.dbProductService.url = jdbc:mysql://google/PRODUCTSERVICE?cloudSqlInstance = springboot-gcp-cloudsql:asia-northeast1:springboot-gcp-cloudsql-instance&socketFactory = com.google.cloud.sql.mysql.SocketFactory&user = root&password = rootspring.dbProductService.username = root
+
+spring.dbProductService.password = root
+spring.dbProductService.testOnBorrow = true
+spring.dbProductService.testWhileIdle = true
+spring.dbProductService.timeBetweenEvictionRunsMillis = 60000
+spring.dbProductService.minEvictableIdleTimeMillis = 30000
+spring.dbProductService.validationQuery = SELECT 1
+spring.dbProductService.max-active = 15
+spring.dbProductService.max-idle = 10
+spring.dbProductService.max-wait = 8000
+```
+
+`application.yml` file:
+
+```yml
+spring:
+   datasource: 
+      driverClassName: com.mysql.jdbc.Driver
+      url: "jdbc:mysql://google/PRODUCTSERVICE?cloudSqlInstance=springboot-gcp-cloudsql:asia-northeast1:springboot-gcp-cloudsql-instance&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=root"
+      password: "root"
+      username: "root"
+      testOnBorrow: true
+      testWhileIdle: true
+      validationQuery: SELECT 1
+      
+      max-active: 15
+      max-idle: 10
+      max-wait: 8000
+```
+
 ### Jib — build Java Docker images better
 
 Jib, an open-source Java containerizer from Google that lets Java developers build containers using the Java tools they know. Jib is a fast and simple container image builder that handles all the steps of packaging your application into a container image. It does not require you to write a Dockerfile or have docker installed, and it is directly integrated into Maven and Gradle—just add the plugin to your build and you'll have your Java application containerized in no time.
