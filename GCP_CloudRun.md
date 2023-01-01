@@ -40,4 +40,8 @@ Cloud Run
 
 ## Cost optimization
 
+![1672605612825](image/GCP_CloudRun/1672605612825.png)
 
+## Case study
+
+![1672605642656](image/GCP_CloudRun/1672605642656.png)
