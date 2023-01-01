@@ -80,6 +80,10 @@ Then we add the App Engine Maven plugin:
 </profile>
 ```
 
+2.2.0
+
+2.4.4
+
 ## Application Configuration
 
 Now, let's define the configuration that allows the application to use the cloud-native resources like the database.
