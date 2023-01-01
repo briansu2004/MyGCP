@@ -174,7 +174,11 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 
 ![1672589075383](image/README/1672589075383.png)
 
+Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
 
+![1672589227175](image/README/1672589227175.png)
+
+![1672589325289](image/README/1672589325289.png)
 
 
 
