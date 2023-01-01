@@ -8,7 +8,7 @@ There are 3 ways to deploy and run an Spring Boot app on GCP.
 
 Google Kubernetes Engine is formerly known as Container Engine. It takes care of provisioning and maintaining the Cluster Virtual Machines, Scaling our applications.
 
-### Steps to deploy a Spring Boot app to GCP GKE
+#### Steps to deploy a Spring Boot app to GCP GKE
 
 1. Create a Kubernetes Cluster
 
@@ -119,6 +119,24 @@ kubernetes                ClusterIP     10.4.0.1     <none>
 
 ![1672580664907](image/GCP_Solutions/1672580664907.png)
 
+#### Pros of using GCP GKE to deploy a Spring Boot app
+
+GKE provides integration with containers that allow a custom runtime and greater control over to Cluster configuration
+
+Easy ability to RollBack to previous Versions of application
+
+GKE provides a Consistent and Repeatable deployment framework
+
+GKE provides Version Management support to accomplish with Docker Containers and Google Container registry
+
+#### Cons of using GCP GKE to deploy a Spring Boot app
+
+Traffic splitting and management should do it by ourself
+
+Understanding the Complex concepts in Kubernetes such as POD, deployment, networking, etc
+
+For smaller applications, it reduces the productivity
+
 ### Spring Boot app to GCP GAE [Not recommended]
 
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
@@ -127,7 +145,7 @@ Google App Engine supports Standard and Flexible environment, and the Flexible e
 
 With the AppEngine Flex Environment, we are not restricted to the Jetty web framework to run the web applications. So there is no need to tweak Spring Boot dependencies to run in the GAE any more.
 
-### Steps to deploy a Spring Boot app to GCP GAE
+#### Steps to deploy a Spring Boot app to GCP GAE
 
 1. Go to Google App Engine, Click on the Create Application button, select Region, and click Create an app
 
@@ -195,7 +213,7 @@ disk_size_gb: 10
 
 ![1672580119659](image/GCP_Solutions/1672580119659.png)
 
-### Pros of using GCP GAE to deploy a Spring Boot app
+#### Pros of using GCP GAE to deploy a Spring Boot app
 
 Project running on GAE can scale down to zero instance, if no requests are coming in, this is useful at the development stage for developers
 
@@ -205,7 +223,7 @@ Fastest Autoscaling Capabilities
 
 Management Complexity reduces as Developer only need to focus on Application and not to worry about managing VM's etc
 
-### Cons of using GCP GAE to deploy a Spring Boot app
+#### Cons of using GCP GAE to deploy a Spring Boot app
 
 GAE is more expensive
 
@@ -219,7 +237,7 @@ GAE has no Network Configuration
 
 Google Compute Engine is Infrastructure  as a Service (IaaS), which allows us to Create VM, allocate Memory, CPU, and Storage (SSD, HDD).
 
-### Steps to deploy a Spring Boot app to GCP GCE (vm)
+#### Steps to deploy a Spring Boot app to GCP GCE (vm)
 
 1. Create a new Virtual Machine
 
@@ -279,7 +297,7 @@ Set the Ubuntu OS with the N1 Standard Machine type with 4 GB of memory.
 
 12. Verify that Spring Boot App is running
 
-### Pros of using GCP GCE (vm) to deploy a Spring Boot app
+#### Pros of using GCP GCE (vm) to deploy a Spring Boot app
 
 GCE is popular with small business applications
 
@@ -289,7 +307,7 @@ GCE provides the full infrastructure in the form of VM that we have control over
 
 GCE allows us to use container optimized OS to run docker containers
 
-### Cons of using GCP GCE (vm) to deploy a Spring Boot app
+#### Cons of using GCP GCE (vm) to deploy a Spring Boot app
 
 VM requires at least one instance to run constantly
 
@@ -298,3 +316,15 @@ Need to manage Application and Virtual Machine regularly
 Auto Scaling is Slower than Google App Engine
 
 High Expensive as we need someone to manage VM and install everything for running Application
+
+### Jib — build Java Docker images better
+
+Jib, an open-source Java containerizer from Google that lets Java developers build containers using the Java tools they know. Jib is a fast and simple container image builder that handles all the steps of packaging your application into a container image. It does not require you to write a Dockerfile or have docker installed, and it is directly integrated into Maven and Gradle—just add the plugin to your build and you'll have your Java application containerized in no time.
+
+Docker build flow:
+
+![1672582196045](image/GCP_Solutions/1672582196045.png)
+
+Jib build flow:
+
+![1672582199966](image/GCP_Solutions/1672582199966.png)
