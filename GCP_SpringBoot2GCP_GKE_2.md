@@ -156,7 +156,7 @@ kubernetes   10.3.240.1     <none>           443/TCP    5m
 
 Note: The EXTERNAL-IP may take several minutes to become available and visible. If the EXTERNAL-IP is missing, then wait a few minutes and try again.
 
-3. You should now be able to reach the service by pointing your browser to <<<<http://<EXTERNAL_IP>:8080>>>>. In the example, the external IP address is `aaa.bbb.ccc.ddd`.
+3. You should now be able to reach the service by pointing your browser to <<<<<<http://<EXTERNAL_IP>:8080>>>>>>. In the example, the external IP address is `aaa.bbb.ccc.ddd`.
 
 ## Scale your service
 
@@ -224,4 +224,18 @@ Note: While that's happening, the users of the services might experience interru
 
 6. Check <http://EXTERNAL_IP:8080> again to see that it's returning the new response.
 
+## Roll back
 
+Oops! Did you make a mistake with a new version of the app? Perhaps the new version contained an error and you need to quickly roll it back. With Kubernetes, you can roll it back to the previous state easily. Roll back the app by running the following command:
+
+`$ kubectl rollout undo deployment/hello-java`
+
+## Clean up if needed
+
+```dos
+$ gcloud container clusters delete hello-java-cluster --zone us-central1-c
+
+$ gcloud container images delete \
+  gcr.io/$GOOGLE_CLOUD_PROJECT/hello-java:v1 \
+  gcr.io/$GOOGLE_CLOUD_PROJECT/hello-java:v2
+```
