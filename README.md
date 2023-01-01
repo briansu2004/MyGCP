@@ -164,56 +164,7 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 
 ## GCP Cloud SQL
 
-![1672588790164](image/README/1672588790164.png)
-
-![1672588826984](image/README/1672588826984.png)
-
-![1672588934012](image/README/1672588934012.png)
-
-![1672589004707](image/README/1672589004707.png)
-
-![1672589075383](image/README/1672589075383.png)
-
-Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
-
-![1672589227175](image/README/1672589227175.png)
-
-![1672589325289](image/README/1672589325289.png)
-
-![1672589396166](image/README/1672589396166.png)
-
-![1672589419763](image/README/1672589419763.png)
-
-![1672589449148](image/README/1672589449148.png)
-
-![1672589493539](image/README/1672589493539.png)
-
-![1672589536451](image/README/1672589536451.png)
-
-![1672589560741](image/README/1672589560741.png)
-
-![1672589647106](image/README/1672589647106.png)
-
-Download the Cloud SQL auth proxy
-
-Install the PostgreSQL client
-
-Start PostgreSQL auth proxy
-
-Connect to the PostgreSQL client
-
-Use it to query PostgreSQL
-
-![1672589738673](image/README/1672589738673.png)
-
-![1672589806058](image/README/1672589806058.png)
-
-![1672589831627](image/README/1672589831627.png)
-
-
-
-
-
+[GCP Cloud SQL](GCP_CloudSQL.md)
 
 ## GCE GKE GAE GCF
 
