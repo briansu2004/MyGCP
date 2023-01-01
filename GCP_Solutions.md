@@ -4,11 +4,107 @@
 
 There are 3 ways to deploy and run an Spring Boot app on GCP.
 
+### Spring Boot app to GCP GAE [Not recommended]
+
+Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
+
+Google App Engine supports Standard and Flexible environment, and the Flexible environment is the best option for deploying the Spring Boot application.
+
+With the AppEngine Flex Environment, we are not restricted to the Jetty web framework to run the web applications. So there is no need to tweak Spring Boot dependencies to run in the GAE any more.
+
+### Steps to deploy a Spring Boot app to GCP GAE
+
+1. Go to Google App Engine, Click on the Create Application button, select Region, and click Create an app
+
+2. Select the Programming Language on which we are deploying the App and select Environment as Flexible
+
+3. Deploy to App Engine using Google's Cloud Shell
+
+4. Clone the Project
+
+`$ git clone https://github.com/infiprotonblog/hello-world-spring-boot-app.git`
+
+5. Change the directory to Spring App
+
+`$ cd hello-world-spring-boot-app/springapp/`
+
+6. Create an appengine folder in the main directory: src/main/appengine/
+
+`$ mkdir src/main/appengine/`
+
+7. Create an app.yaml file inside the appengine folder
+
+`$ vim app.yml`
+
+or nano, vi etc.
+
+8. Add the below contents to it
+
+```yml
+#app.yml file src/main/appengine
+
+runtime: java
+env: flex
+
+env_variables:
+SPRING_PROFILES_ACTIVE: "cloud-gcp"
+
+handlers:  
+- url: /.*
+script: this field is required, but ignored
+secure: always
+manual_scaling:
+instances: 1
+
+resources:
+cpu: 2
+memory_gb: 2.3
+disk_size_gb: 10
+```
+
+9. Set the configuration to the Google App Engine project
+
+`$ gcloud init`
+
+10. Change the directory to the appengine, so we can deploy the App using the app.yml file
+
+`$ cd src/main/appengine/`
+
+11. Deploy to Google App Engine using the below command
+
+`$ gcloud app deploy`
+
+12. Verify that the Application is running
+
+`$ https://learn1233.uc.r.appspot.com/hello`
+
+![1672580119659](image/GCP_Solutions/1672580119659.png)
+
+### Pros of using GCP GAE to deploy a Spring Boot app
+
+Project running on GAE can scale down to zero instance, if no requests are coming in, this is useful at the development stage for developers
+
+GAE suited for Large Corporations as it automates everything
+
+Fastest Autoscaling Capabilities
+
+Management Complexity reduces as Developer only need to focus on Application and not to worry about managing VM's etc
+
+### Cons of using GCP GAE to deploy a Spring Boot app
+
+GAE is more expensive
+
+GAE provides less control over to App Engine
+
+GAE restriction is, we can create applications in limited Programming Languages such as Python, Java, Go, PHP, NodeJs, etc
+
+GAE has no Network Configuration
+
 ### Spring Boot app to GCP GCE (vm) [Not recommended]
 
 Google Compute Engine is Infrastructure  as a Service (IaaS), which allows us to Create VM, allocate Memory, CPU, and Storage (SSD, HDD).
 
-### Steps
+### Steps to deploy a Spring Boot app to GCP GCE (vm)
 
 1. Create a new Virtual Machine
 
