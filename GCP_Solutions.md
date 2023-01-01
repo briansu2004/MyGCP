@@ -139,6 +139,8 @@ For smaller applications, it reduces the productivity
 
 ### Spring Boot app to GCP GAE [Not recommended]
 
+[Another Guide for Spring Boot 2 GCP GAE](GCP_SpringBoot2GCP_GAE_2.md)
+
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
 
 Google App Engine supports Standard and Flexible environment, and the Flexible environment is the best option for deploying the Spring Boot application.

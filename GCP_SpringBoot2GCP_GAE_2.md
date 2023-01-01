@@ -12,7 +12,7 @@ TOC
 
 ```dos
 gcloud init
-gcloud config set project baeldung-spring-boot-bootstrap
+gcloud config set project sutek-spring-boot-bootstrap
 ```
 
 We'll install the App Engine support and create an App Engine instance:
@@ -33,13 +33,13 @@ We can create a MySQL instance and database in Cloud SQL using the Cloud Console
 ```dos
 # create instance
 gcloud sql instances create \
-  baeldung-spring-boot-bootstrap-db \
+  sutek-spring-boot-bootstrap-db \
     --tier=db-f1-micro \
     --region=europe-west2
 # create database
 gcloud sql databases create \
-  baeldung_bootstrap_db \
-    --instance=baeldung-spring-boot-bootstrap-db
+  sutek_bootstrap_db \
+    --instance=sutek-spring-boot-bootstrap-db
 ```
 
 ## Spring Cloud GCP Dependencies
@@ -86,14 +86,14 @@ Now, let's define the configuration that allows the application to use the cloud
 
 Spring Cloud GCP uses `spring-cloud-bootstrap.properties` to determine the application name:
 
-`spring.cloud.appId=baeldung-spring-boot-bootstrap`
+`spring.cloud.appId=sutek-spring-boot-bootstrap`
 
 We'll use a Spring Profile named gcp for this deployment and we'll need to configure the database connection. Therefore we create `src/main/resources/application-gcp.properties`:
 
 ```dos
 spring.cloud.gcp.sql.instance-connection-name=\
-    baeldung-spring-boot-bootstrap:europe-west2:baeldung-spring-boot-bootstrap-db
-spring.cloud.gcp.sql.database-name=baeldung_bootstrap_db
+    sutek-spring-boot-bootstrap:europe-west2:sutek-spring-boot-bootstrap-db
+spring.cloud.gcp.sql.database-name=sutek_bootstrap_db
 ```
 
 ## Deployment
@@ -140,7 +140,7 @@ gcloud app logs tail
 Now, let's verify that our application is working by adding a book:
 
 ```dos
-http POST https://baeldung-spring-boot-bootstrap.appspot.com/api/books \
+http POST https://sutek-spring-boot-bootstrap.appspot.com/api/books \
         title="The Player of Games" author="Iain M. Banks"
 ```
 
