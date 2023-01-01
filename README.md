@@ -192,6 +192,17 @@ Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
 
 ![1672589560741](image/README/1672589560741.png)
 
+![1672589647106](image/README/1672589647106.png)
+
+![1672589688100](image/README/1672589688100.png)
+
+
+
+
+
+
+
+
 ## GCE GKE GAE GCF
 
 Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
