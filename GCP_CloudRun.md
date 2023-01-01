@@ -28,6 +28,6 @@ Cloud Run
 
 ![1672605333900](image/GCP_CloudRun/1672605333900.png)
 
+![1672605427714](image/GCP_CloudRun/1672605427714.png)
 
-
-
+![1672605449926](image/GCP_CloudRun/1672605449926.png)
