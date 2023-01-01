@@ -44,6 +44,54 @@ Google Kubernetes Engine is formerly known as Container Engine. It takes care of
 
 ![1672580339614](image/GCP_Solutions/1672580339614.png)
 
+9. Push the Spring App docker image to Google's Container Registry
+
+First, setup the PROJECT_ID of your project as below
+
+`$ export PROJECT_ID=<your-project-id>`
+
+`$ export PROJECT_ID=learn1233`
+
+Retag the Spring App docker image according to Google Container registry
+
+`$ docker tag <old-image-name> <new-image-name>`
+
+`$ docker tag spring-app gcr.io/${PROJECT_ID}/spring-app`
+
+Now push the Spring App docker image to the Google Container registry
+
+`$ docker push gcr.io/${PROJECT_ID}/<image-name>`
+
+`$ docker push gcr.io/${PROJECT_ID}/spring-app`
+
+![1672580471780](image/GCP_Solutions/1672580471780.png)
+
+10. Deploy Spring App to Kubernetes
+
+Click on the Connect button of Spring App Cluster to connect to the Kubernetes cluster
+
+![1672580525768](image/GCP_Solutions/1672580525768.png)
+
+Create a Deployment for Spring App docker image
+
+`$ kubectl create deployment hello-spring-app --image=gcr.io/${PROJECT_ID}/spring-app`
+
+To View the Deployment that we just created
+
+```dos
+$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+hello-spring-app   1/1     1            1           14s
+```
+
+To View, the Spring App Pod instances created by the deployment
+
+```dos
+$ kubectl get pods
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+hello-spring-app-5c7598bf68-sd6q6   1/1     Running         0       58s
+```
+
 ### Spring Boot app to GCP GAE [Not recommended]
 
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
