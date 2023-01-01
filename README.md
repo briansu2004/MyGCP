@@ -180,6 +180,16 @@ Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
 
 ![1672589325289](image/README/1672589325289.png)
 
+![1672589396166](image/README/1672589396166.png)
+
+![1672589419763](image/README/1672589419763.png)
+
+![1672589449148](image/README/1672589449148.png)
+
+
+
+
+
 
 
 ## GCE GKE GAE GCF
