@@ -59,3 +59,9 @@ Exponential backup and connection pooling
 ## Cost Optimization for Cloud SQL
 
 ![1672590365770](image/GCP_CloudSQL/1672590365770.png)
+
+## Use Cases
+
+![1672590400427](image/GCP_CloudSQL/1672590400427.png)
+
+![1672590487634](image/GCP_CloudSQL/1672590487634.png)
