@@ -194,6 +194,16 @@ Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
 
 ![1672589647106](image/README/1672589647106.png)
 
+Download the Cloud SQL auth proxy
+
+Install the PostgreSQL client
+
+Start PostgreSQL auth proxy
+
+Connect to the PostgreSQL client
+
+Use it to query PostgreSQL
+
 ![1672589738673](image/README/1672589738673.png)
 
 ![1672589806058](image/README/1672589806058.png)
