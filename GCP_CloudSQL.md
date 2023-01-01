@@ -1,5 +1,15 @@
 # GCP Cloud SQL
 
+Cloud SQl lab
+
+## Database services Portfolio
+
+![1672590914504](image/GCP_CloudSQL/1672590914504.png)
+
+## Databases decision chart
+
+![1672590971609](image/GCP_CloudSQL/1672590971609.png)
+
 ## Demo
 
 ![1672588790164](image/GCP_CloudSQL/1672588790164.png)
