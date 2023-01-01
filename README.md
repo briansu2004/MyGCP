@@ -194,9 +194,11 @@ Use 2 SQL scripts: 1 for create tables, and 1 for populating data to the tables.
 
 ![1672589647106](image/README/1672589647106.png)
 
-![1672589688100](image/README/1672589688100.png)
+![1672589738673](image/README/1672589738673.png)
 
+![1672589806058](image/README/1672589806058.png)
 
+![1672589831627](image/README/1672589831627.png)
 
 
 
