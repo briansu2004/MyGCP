@@ -92,6 +92,33 @@ NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
 hello-spring-app-5c7598bf68-sd6q6   1/1     Running         0       58s
 ```
 
+11. Allow External Traffic
+
+We have a Container running under the control of Kubernetes, Now it's time to make it accessible to the outside world
+
+`$ kubectl expose deployment <deployment-name> --name=<service-name> --type=LoadBalancer --port 8080 --target-port 8080`
+
+`$ kubectl expose deployment hello-spring-app --name=hello-spring-app-service --type=LoadBalancer --port 8080 --target-port 8080`
+
+12. Check the Service that we just created
+
+```dos
+$ kubectl get services
+NAME                         TYPE       CLUSTER-IP   EXTERNAL-IP
+hello-spring-app-service  LoadBalancer  10.4.1.232  35.192.217.243
+kubernetes                ClusterIP     10.4.0.1     <none>
+
+ PORT(S)          AGE
+8080:30571/TCP    102s
+443/TCP           80m
+```
+
+13. Verify that Spring Boot App is running
+
+`$ http://35.192.217.243:8080/hello`
+
+![1672580664907](image/GCP_Solutions/1672580664907.png)
+
 ### Spring Boot app to GCP GAE [Not recommended]
 
 Google App Engine is a Platform as a Service and cloud computing platform for developing and hosting web applications.
