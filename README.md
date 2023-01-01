@@ -158,6 +158,10 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 - Planned architecture changes for moving everything to Google Cloud Platform, such as migrating Oracle to NoSQL BigQuery.
 - Documented everything in the share drive for knowledge sharing.
 
+## My GCP Solutions
+
+[My GCP Solutions](GCP_Solutions.md)
+
 ## GCE GKE GAE GCF
 
 Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
