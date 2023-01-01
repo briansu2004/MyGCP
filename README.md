@@ -178,7 +178,6 @@ Google Cloud Platform (GCP) offers multiple services like Google Compute Engine 
 
 [GCP Cloud SQL](GCP_CloudSQL.md)
 
-
 ## GCP Architect
 
 [GCP Architect](GCP_Architect.md)
@@ -232,3 +231,7 @@ For the images uploaded to GCP buckets, use Eventarc + Cloud Run + Workflow + Vi
 ## Lab, exercises and practice
 
 - Hands-on labs with Qwiklabs.
+
+## CBTNuggets GCP Fundamentals
+
+[CBTNuggets GCP Fundamentals](CBTNuggets-gcp-fundamentals/README.md)
