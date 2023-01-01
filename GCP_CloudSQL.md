@@ -10,6 +10,10 @@ Cloud SQl lab
 
 ![1672590971609](image/GCP_CloudSQL/1672590971609.png)
 
+## HA
+
+![1672591209694](image/GCP_CloudSQL/1672591209694.png)
+
 ## Demo
 
 ![1672588790164](image/GCP_CloudSQL/1672588790164.png)
