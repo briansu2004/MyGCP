@@ -22,11 +22,11 @@ Cloud Run
 
 ![1672605256963](image/GCP_CloudRun/1672605256963.png)
 
+![1672605286690](image/GCP_CloudRun/1672605286690.png)
 
+![1672605308203](image/GCP_CloudRun/1672605308203.png)
 
-
-
-
+![1672605333900](image/GCP_CloudRun/1672605333900.png)
 
 
 
