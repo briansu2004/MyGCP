@@ -45,3 +45,9 @@ Cloud Run
 ## Case study
 
 ![1672605642656](image/GCP_CloudRun/1672605642656.png)
+
+![1672605687472](image/GCP_CloudRun/1672605687472.png)
+
+## Try Cloud Run out in a lab
+
+<https://goo.gle/3kUwLj0>
