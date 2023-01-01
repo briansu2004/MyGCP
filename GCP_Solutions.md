@@ -4,7 +4,7 @@
 
 There are 3 ways to deploy and run an Spring Boot app on GCP.
 
-### Spring Boot app to GCP GCE (vm)
+### Spring Boot app to GCP GCE (vm) [Not recommended]
 
 Google Compute Engine is Infrastructure  as a Service (IaaS), which allows us to Create VM, allocate Memory, CPU, and Storage (SSD, HDD).
 
@@ -57,10 +57,16 @@ Set the Ubuntu OS with the N1 Standard Machine type with 4 GB of memory.
 ![1672579522543](image/GCP_Solutions/1672579522543.png)
 
 - Go to Firewall Settings
+
+![1672579545958](image/GCP_Solutions/1672579545958.png)
+
 - Go to default-http-server and click on the edit button
+
 - Add the 8080 port to the TCP and click the Save button to make the changes
 
-1.  Verify that Spring Boot App is running
+![1672579554844](image/GCP_Solutions/1672579554844.png)
+
+12. Verify that Spring Boot App is running
 
 ### Pros of using GCP GCE (vm) to deploy a Spring Boot app
 
