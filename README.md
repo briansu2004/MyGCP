@@ -162,6 +162,14 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 
 [My GCP Solutions](GCP_Solutions.md)
 
+## GCE vs GKE vs GAE vs GCF
+
+Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
+
+## Google Kubernetes Engine (aka GKE)
+
+[GCP GKE](GCP_GKE.md)
+
 ## Cloud Run
 
 [GCP Cloud Run](GCP_CloudRun.md)
@@ -170,9 +178,6 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 
 [GCP Cloud SQL](GCP_CloudSQL.md)
 
-## GCE GKE GAE GCF
-
-Google Cloud Platform (GCP) offers multiple services like Google Compute Engine (GCE), Google Kubernetes Engine (formerly Container Engine) (GKE), Google App Engine (GAE) and Google Cloud Functions (GCF).
 
 ## GCP Architect
 
