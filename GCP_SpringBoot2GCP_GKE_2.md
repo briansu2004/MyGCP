@@ -105,3 +105,123 @@ You should now have a fully functioning Kubernetes cluster powered by GKE.
 ![1672587974873](image/GCP_SpringBoot2GCP_GKE_2/1672587974873.png)
 
 It's now time to deploy your containerized app to the Kubernetes cluster! From now on, you'll use the kubectl command line (already set up in your Cloud Shell environment). The rest of the codelab requires the Kubernetes client and server version to be 1.2 or higher. kubectl version will show you the current version of the command.
+
+## Deploy your app to Kubernetes
+
+1. A Kubernetes deployment can create, manage, and scale multiple instances of your app using the container image that you created. Deploy one instance of your app to Kubernetes using the `kubectl run` command.
+
+```dos
+$ kubectl create deployment hello-java \
+  --image=gcr.io/$GOOGLE_CLOUD_PROJECT/hello-java:v1
+```
+
+2. To view the deployment that you created, simply run the following command:
+
+```dos
+$ kubectl get deployments
+NAME         DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+hello-java   1         1         1            1           37s
+```
+
+3. To view the app instances created by the deployment, run the following command:
+
+```dos
+$ kubectl get pods
+NAME                         READY     STATUS    RESTARTS   AGE
+hello-java-714049816-ztzrb   1/1       Running   0          57s
+```
+
+At this point, you should have your container running under the control of Kubernetes, but you still have to make it accessible to the outside world.
+
+## Allow external traffic
+
+By default, the Pod is only accessible by its internal IP within the cluster. In order to make the `hello-java` container accessible from outside the Kubernetes virtual network, you have to expose the Pod as a Kubernetes service.
+
+1. In Cloud Shell, you can expose the Pod to the public internet by creating a Kubernetes LoadBalancer service.
+
+`$ kubectl create service loadbalancer hello-java --tcp=8080:8080`
+
+Note that you directly expose the deployment, not the Pod. That will cause the resulting service to load balance traffic across all Pods managed by the deployment (in this case, only one Pod, but you'll add more replicas later).
+
+The Kubernetes Master creates the load balancer and related Compute Engine forwarding rules, target pools, and firewall rules to make the service fully accessible from outside of Google Cloud.
+
+2. To find the publicly accessible IP address of the service, simply request `kubectl` to list all the cluster services.
+
+```dos
+$ kubectl get services
+NAME         CLUSTER-IP     EXTERNAL-IP      PORT(S)    AGE
+Hello-java   10.3.253.62    aaa.bbb.ccc.ddd  8080/TCP    1m
+kubernetes   10.3.240.1     <none>           443/TCP    5m
+```
+
+Note: The EXTERNAL-IP may take several minutes to become available and visible. If the EXTERNAL-IP is missing, then wait a few minutes and try again.
+
+3. You should now be able to reach the service by pointing your browser to <<<<http://<EXTERNAL_IP>:8080>>>>. In the example, the external IP address is `aaa.bbb.ccc.ddd`.
+
+## Scale your service
+
+One of the powerful features offered by Kubernetes is how easy it is to scale your app. Suppose that you suddenly need more capacity for your app. You can simply tell the replication controller to manage a new number of replicas for your app instances.
+
+```dos
+$ kubectl scale deployment hello-java --replicas=3
+deployment "hello-java" scaled
+
+$ kubectl get deployment
+NAME         DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+hello-java   3         3         3            3           22m
+```
+
+Notice the declarative approach. Rather than starting or stopping new instances, you declare how many instances should be running at all times. Kubernetes reconciliation loops simply make sure that the reality matches what you requested and takes action, if needed.
+
+## Roll out an upgrade to your service
+
+At some point, the app that you deployed to production will require bug fixes or additional features. Kubernetes can help you deploy a new version to production without impacting your users.
+
+1. Open the code editor by clicking Launch editor 26e896774198a7b9.pngin the Cloud Shell menu.
+
+2. Navigate to `src/main/java/com/example/springboot/HelloController.java` and update the value of the response.
+
+```java
+package com.example.springboot;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HelloController {
+
+    @RequestMapping("/")
+    public String index() {
+        return "Greetings from Google Kubernetes Engine!";
+    }
+}
+```
+
+3. Use Jib to build and push a new version of the container image. Building and pushing the updated image should be much quicker as you take full advantage of caching.
+
+```dos
+$ ./mvnw -DskipTests package \
+  com.google.cloud.tools:jib-maven-plugin:build \
+  -Dimage=gcr.io/$GOOGLE_CLOUD_PROJECT/hello-java:v2
+```
+
+You're ready for Kubernetes to smoothly update your replication controller to the new version of the app!
+
+4. In order to change the image label for your running container, you need to edit the existing `hello-java` deployment and change the image from `gcr.io/PROJECT_ID/hello-java:v1` to `gcr.io/PROJECT_ID/hello-java:v2`.
+
+5. You can use the kubectl set image command to ask Kubernetes to deploy the new version of your app across the entire cluster one instance at a time with rolling updates.
+
+```dos
+$ kubectl set image deployment/hello-java \
+  hello-java=gcr.io/$GOOGLE_CLOUD_PROJECT/hello-java:v2
+
+deployment "hello-java" image updated
+```
+
+Note: While that's happening, the users of the services might experience interruptions, but that's because there was no health check configured. That's a slightly more advanced configuration that's beyond the scope of the codelab.
+
+(Configure Liveness, Readiness and Startup Probes)
+
+6. Check <http://EXTERNAL_IP:8080> again to see that it's returning the new response.
+
+
