@@ -164,7 +164,7 @@ Designed, developed, deployed and managed Microservices Java RESTful APIs to Ope
 
 ## Cloud Run
 
-[GCP Cloud SQL](GCP_CloudRun.md)
+[GCP Cloud Run](GCP_CloudRun.md)
 
 ## GCP Cloud SQL
 
