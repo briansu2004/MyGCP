@@ -60,8 +60,8 @@ Plugin
 
 ![1672937343802](image/GCP_Firebase/1672937343802.png)
 
+![1672937409452](image/GCP_Firebase/1672937409452.png)
 
-
-
+![1672937430633](image/GCP_Firebase/1672937430633.png)
 
 
