@@ -2,9 +2,17 @@
 
 <!-- https://www.youtube.com/watch?v=zEWMa-yJQmg&list=PLIivdWyY5sqJOQJCXW_aYEqwfyi6bu1gC&index=8 -->
 
-Firebase is a suite of tools for building apps on top of Google Cloud Platform. It's most famous for its realtime database, but also includes services for user authentication, serverless computing, push messaging, file storage, and more. <https://fireship.io/pro>
+Firebase is a suite of tools for building apps on top of Google Cloud Platform. It's most famous for its realtime database, but also includes services for user authentication, serverless computing, push messaging, file storage, and more.
 
-## Info
+## Firebase realtime database
+
+This is my focus now.
+
+![1672943547128](image/GCP_Firebase/1672943547128.png)
+
+![1672943580882](image/GCP_Firebase/1672943580882.png)
+
+## General Info
 
 ![1672936299099](image/GCP_Firebase/1672936299099.png)
 
