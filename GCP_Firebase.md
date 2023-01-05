@@ -15,3 +15,7 @@ Firebase supports these -
 ![1672936415824](image/GCP_Firebase/1672936415824.png)
 
 ![1672936478619](image/GCP_Firebase/1672936478619.png)
+
+![1672936562091](image/GCP_Firebase/1672936562091.png)
+
+![1672936615406](image/GCP_Firebase/1672936615406.png)
