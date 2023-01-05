@@ -24,10 +24,7 @@ This is my focus now.
 
 ![1672944135648](image/GCP_Firebase/1672944135648.png)
 
-
-
-
-
+![1672944159966](image/GCP_Firebase/1672944159966.png)
 
 ## General Info
 
