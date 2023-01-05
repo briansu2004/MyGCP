@@ -12,6 +12,14 @@ This is my focus now.
 
 ![1672943580882](image/GCP_Firebase/1672943580882.png)
 
+![1672943609232](image/GCP_Firebase/1672943609232.png)
+
+![1672943635824](image/GCP_Firebase/1672943635824.png)
+
+![1672943692442](image/GCP_Firebase/1672943692442.png)
+
+
+
 ## General Info
 
 ![1672936299099](image/GCP_Firebase/1672936299099.png)
