@@ -20,7 +20,11 @@ Firebase supports these -
 
 ![1672936615406](image/GCP_Firebase/1672936615406.png)
 
+## Use case
+
 ![1672936660065](image/GCP_Firebase/1672936660065.png)
 
+## How to connect the Android app to Firebase
 
+![1672936874491](image/GCP_Firebase/1672936874491.png)
 
