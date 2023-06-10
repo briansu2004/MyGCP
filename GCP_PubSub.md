@@ -29,3 +29,36 @@ Details:
 ![1686398429582](image/GCP_PubSub/1686398429582.png)
 
 ![1686398477810](image/GCP_PubSub/1686398477810.png)
+
+## Using GCP CLI
+
+### 1. gcloud config
+
+```dos
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+gcloud pubsub topics describe YOUR_TOPIC_ID
+gcloud pubsub subscriptions describe YOUR_SUBSCRIPTION_ID
+```
+
+### 2. Publish messages
+
+```dos
+C:\tmp>gcloud pubsub topics publish activity-log-test --message="Hello World!" --attribute=KEY1=VAL1,KEY2=VAL2
+messageIds:
+- '8353411737264052'
+
+C:\tmp>gcloud pubsub topics publish activity-log-test --message="{'id': 123}"   
+messageIds:
+- '8353411737292502'
+
+C:\tmp>gcloud pubsub topics publish activity-log-test --message="{'id': 123, 'name': 'John Doe'}"
+messageIds:
+- '8353411737556015'
+
+C:\tmp>gcloud pubsub topics publish activity-log-test --message="{'id': 123, 'name': 'John Doe', \"email\": \"johndoe@example.com\"}"
+messageIds:
+- '6904971219155605'
+```
+
+### 3. Pull the messages
