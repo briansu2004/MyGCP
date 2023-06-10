@@ -62,3 +62,27 @@ messageIds:
 ```
 
 ### 3. Pull the messages
+
+```dos
+gcloud pubsub subscriptions pull activity-log-test-sub --auto-ack --limit=10
+```
+
+```dos
+C:\tmp>gcloud pubsub subscriptions pull activity-log-test-sub --auto-ack --limit=10
++-----------------------------------------------------------------+------------------+--------------+------------+------------------+------------+
+|                               DATA                              |    MESSAGE_ID    | ORDERING_KEY | ATTRIBUTES | DELIVERY_ATTEMPT | ACK_STATUS |
++-----------------------------------------------------------------+------------------+--------------+------------+------------------+------------+
+| {                                                               | 8353412047225975 |              |            |                  | SUCCESS    |
+|   "id": 123,                                                    |                  |              |            |                  |            |
+|   "name": "John Doe",                                           |                  |              |            |                  |            |
+|   "email": "johndoe@example.com"                                |                  |              |            |                  |            |
+| }                                                               |                  |              |            |                  |            |
+| {'id': 123, 'name': 'John Doe'}                                 | 8353411737556015 |              |            |                  | SUCCESS    |
+| {'id': 123, 'name': 'John Doe', "email": "johndoe@example.com"} | 6904971219155605 |              |            |                  | SUCCESS    |
+| Hello World!                                                    | 8353411737264052 |              | KEY1=VAL1  |                  | SUCCESS    |
+|                                                                 |                  |              | KEY2=VAL2  |                  |            |
+| {'id': 123}                                                     | 8353411737292502 |              |            |                  | SUCCESS    |
++-----------------------------------------------------------------+------------------+--------------+------------+------------------+------------+
+```
+
+
