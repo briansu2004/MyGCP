@@ -4,6 +4,19 @@ My GCP
 
 ## My GCP projects
 
+```text
+When I worked for ..., I worked on many projects with GCP, including the following:
+- Deploying Java Applications on Google Kubernetes Engine (GKE): I successfully deployed Java applications onto GKE, leveraging Kubernetes to manage containerized workloads efficiently. This involved configuring deployment strategies, managing resources, and ensuring high availability and scalability.
+- Scaling Applications with GKE: I actively participated in scaling applications up and down based on demand using GKE's autoscaling capabilities. This involved monitoring application performance metrics and adjusting resource allocations accordingly to optimize cost and performance.
+- Containerization with Docker and Kubernetes: I containerized applications using Docker images and managed them effectively using Kubernetes. This allowed for consistent deployment across environments and simplified the management of dependencies and configurations.
+- Utilizing Pub/Sub for Message Management: I leveraged Google Cloud Pub/Sub to implement messaging solutions for asynchronous communication between components of distributed systems. This involved designing message schemas, managing subscriptions, and ensuring reliable message delivery.
+- Infrastructure as Code with Terraform: I used Terraform to define and provision infrastructure resources on GCP in a repeatable and automated manner. This included defining infrastructure components such as virtual machines, networks, and storage resources using Terraform configurations.
+- Data Management with BigQuery and Cloud Storage (GCS): I utilized BigQuery for storing and querying large-scale datasets, enabling efficient data analysis and insights generation. Additionally, I managed data storage requirements using GCS buckets, implementing best practices for data lifecycle management and access control.
+- VPN Configuration and Management: I configured virtual private networks (VPNs) on GCP to establish secure connections between on-premises infrastructure and GCP resources. This involved designing network topologies, configuring VPN gateways, and ensuring secure data transmission.
+- Virtual Machine (VM) Management: I managed virtual machine instances on GCP, provisioning and configuring VMs to meet application requirements. This included optimizing VM performance, monitoring resource utilization, and implementing automated backups and disaster recovery strategies.
+- Data and Application Migration: I designed and implemented data migration strategies to transfer large volumes of data to GCP, ensuring minimal downtime and data integrity. Additionally, I facilitated the migration of applications to GCP, optimizing architecture and configurations for cloud-native environments.
+```
+
 ### Project 18
 
 GitLab CI/CD pipeline with BigQuery and GCS
